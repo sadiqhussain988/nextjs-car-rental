@@ -12,12 +12,13 @@ export default function Home() {
       <Testimonials />
 
       {/* Call to Action Section */}
-      <section className="py-20 bg-blue-600 text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl font-extrabold text-white leading-tight">
-            Ready to hit the road? Book your dream car today!
+      <section className="py-20 bg-slate-900 text-center">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
+            Ready to hit the road?{" "}
+            <span className="text-yellow-400">Book your dream car today!</span>
           </h2>
-          <button className="mt-8 bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-slate-100 transition-all shadow-xl active:scale-95">
+          <button className="mt-8 bg-yellow-400 text-slate-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-yellow-300 transition-all shadow-2xl active:scale-95">
             Check All Cars
           </button>
         </div>
