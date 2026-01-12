@@ -148,7 +148,7 @@ export default function TruckServices() {
             Our Truck Fleet
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional pickup truck rental services in Sharjah and surrounding areas. Choose from our wide range of well-maintained vehicles.
+            Professional pickup truck rental services in Sharjah and surrounding areas. Choose from our wide range of well maintained vehicles.
           </p>
         </div>
 
