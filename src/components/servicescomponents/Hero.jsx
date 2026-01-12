@@ -1,103 +1,121 @@
 "use client";
-import React from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { IoCarSportOutline } from "react-icons/io5";
-import { FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
-function Hero() {
-  const slides = [
-    {
-      title: "Pickup Truck Rental",
-      subtitle: "Sharjah & Dubai",
-      description: "Fast, reliable, and affordable rental services. Available Monday to Saturday, 8 AM - 6 PM.",
-      bgImage: "https://pickuptruckrentalsajaa.com/wp-content/uploads/2025/10/Untitled-design-_4_-min-1-e1761835498449.jpeg",
-      overlay: "bg-gradient-to-br from-white-900/10 via-slate-800/80 to-slate-700/80"
-    },
-    {
-      title: "Professional Drivers",
-      subtitle: "Experienced & Licensed",
-      description: "Our trained drivers ensure safe and timely delivery of your cargo across all locations.",
-      bgImage: "https://images.pexels.com/photos/257636/pexels-photo-257636.jpeg",
-     overlay: "bg-gradient-to-br from-white-900/10 via-slate-800/80 to-slate-700/80"
-    },
-    {
-      title: "Wide Fleet Selection",
-      subtitle: "From 1 Ton to 50 Feet Trailers",
-      description: "Choose from our extensive range of vehicles to match your specific transportation needs.",
-      bgImage: "https://pickuptruckrentalsajaa.com/wp-content/uploads/2025/10/Untitled-design-_31_.jpeg",
-      overlay: "bg-gradient-to-br from-white-900/10 via-slate-800/80 to-slate-700/80"
-    }
-  ];
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+
+const serviceSlides = [
+  {
+    title: "Pickup Truck Rental",
+    highlight: "Sharjah & Dubai",
+    desc: "Fast, reliable, and affordable rental services. Available Monday to Saturday, 8 AM - 6 PM for all your transport needs.",
+    image:
+      "https://pickuptruckrentalsajaa.com/wp-content/uploads/2025/10/Untitled-design-_4_-min-1-e1761835498449.jpeg",
+  },
+  {
+    title: "Professional Drivers",
+    highlight: "Experienced & Licensed",
+    desc: "Our trained drivers ensure safe and timely delivery of your cargo across all locations with professional handling.",
+    image: "https://images.pexels.com/photos/257636/pexels-photo-257636.jpeg",
+  },
+  {
+    title: "Wide Fleet Selection",
+    highlight: "1 Ton to 50 Feet Trailers",
+    desc: "Choose from our extensive range of vehicles to match your specific transportation needs, from small pickups to heavy trailers.",
+    image:
+      "https://pickuptruckrentalsajaa.com/wp-content/uploads/2025/10/Untitled-design-_31_.jpeg",
+  },
+];
+
+export default function Hero() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % serviceSlides.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const prevSlide = () => {
+    setIndex(
+      (prev) => (prev - 1 + serviceSlides.length) % serviceSlides.length
+    );
+  };
+
+  const nextSlide = () => {
+    setIndex((prev) => (prev + 1) % serviceSlides.length);
+  };
 
   return (
-    <div className="relative h-[100vh] text-white overflow-hidden">
-      <Swiper
-        modules={[Autoplay, Pagination]}
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
-        pagination={{ clickable: true }}
-        className="h-full"
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      {/* Background Slider - Horizontal Animation */}
+      <AnimatePresence mode="sync" initial={false}>
+        <motion.div
+          key={serviceSlides[index].image}
+          initial={{ x: "100%" }}
+          animate={{ x: 0 }}
+          exit={{ x: "-100%" }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{ backgroundImage: `url(${serviceSlides[index].image})` }}
+        />
+      </AnimatePresence>
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/50 to-black/30" />
+
+      {/* Left Arrow (Added as per Home UI) */}
+      <div
+        onClick={prevSlide}
+        className="absolute hidden lg:block left-6 z-20 bg-gray-100/25 hover:bg-gray-100/35 p-4 rounded-full cursor-pointer transition-all"
       >
-        {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <div className="relative h-full">
-              {/* Background Image */}
-              <div 
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                style={{ backgroundImage: `url('${slide.bgImage}')` }}
-              >
-                {/* Gradient Overlay */}
-                <div className={`absolute inset-0 ${slide.overlay}`}></div>
-                
-                {/* Animated background elements */}
-                <div className="absolute inset-0">
-                  <div className="absolute top-10 left-10 w-32 h-32 bg-yellow-400/10 rounded-full animate-pulse"></div>
-                  <div className="absolute bottom-20 right-20 w-24 h-24 bg-yellow-400/20 rounded-full animate-bounce"></div>
-                  <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-yellow-400/15 rounded-full animate-ping"></div>
-                </div>
-              </div>
-              
-              {/* Content */}
-              <div className="relative h-full flex items-center justify-center p-8 z-10">
-                <div className="relative text-center max-w-4xl mx-auto">
-                  <div className="flex justify-center mb-6">
-                    <div className="bg-yellow-400 p-4 rounded-full shadow-2xl backdrop-blur-sm">
-                      <IoCarSportOutline size={48} className="text-slate-900" />
-                    </div>
-                  </div>
+        <ArrowLeft className="text-white" />
+      </div>
 
-                  <h1 className="text-5xl font-extrabold mb-6 tracking-tight leading-tight bg-gradient-to-r from-yellow-400 to-yellow-200 bg-clip-text text-transparent">
-                    {slide.title}
-                  </h1>
-                  <h2 className="text-2xl md:text-3xl font-semibold mb-8 text-gray-200">
-                    {slide.subtitle}
-                  </h2>
+      {/* Content Area */}
+      <div className="relative z-10 max-w-7xl w-full px-6 flex items-center justify-center text-center">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 40 }} // Bottom to Top Entry
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -40 }} // Top Exit
+            transition={{ duration: 0.6 }}
+            className="text-white"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              {serviceSlides[index].title}
+              <span className="block text-yellow-400">
+                {serviceSlides[index].highlight}
+              </span>
+            </h1>
+            <p className="mt-6 text-lg text-white/80 max-w-xl mx-auto leading-relaxed">
+              {serviceSlides[index].desc}
+            </p>
 
-                  <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed text-gray-300">
-                    {slide.description}
-                  </p>
+            {/* Action Buttons */}
+            <div className="mt-8 flex flex-wrap gap-4 items-center justify-center">
+              <button className="rounded-2xl px-8 py-3 text-base font-semibold bg-yellow-400 text-black hover:bg-yellow-300 transition shadow-lg active:scale-95">
+                Book Now
+              </button>
 
-                  <div className="flex flex-col sm:flex-row justify-center gap-8 mb-12">
-                    <a href="#services" className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-500 text-slate-50 py-2 px-5 rounded-full text-xl font-bold hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 shadow-2xl hover:shadow-yellow-400/50 transform hover:scale-105">
-                      Book Now
-                    </a>
-                    <a href="mailto:pickuptruckrental@driveease.com" className="flex items-center gap-3 bg-white/10 backdrop-blur-sm px-5 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all">
-                      <FaEnvelope className="text-yellow-400" />
-                      <span className="text-lg font-semibold">Contact Us</span>
-                    </a>
-                  </div>
-
-                 
-                </div>
-              </div>
+              <button className="rounded-2xl px-8 py-3 text-base font-semibold border border-white/40 text-white hover:bg-white/10 transition active:scale-95">
+                Contact Us
+              </button>
             </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
+
+      {/* Right Arrow (Added as per Home UI) */}
+      <div
+        onClick={nextSlide}
+        className="absolute hidden lg:block right-6 z-20 bg-gray-100/25 hover:bg-gray-100/35 p-4 rounded-full cursor-pointer transition-all"
+      >
+        <ArrowRight className="text-white" />
+      </div>
+    </section>
   );
 }
-
-export default Hero;
