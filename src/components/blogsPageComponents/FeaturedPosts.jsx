@@ -4,7 +4,7 @@ import { FaArrowRight, FaClock } from "react-icons/fa";
 const FeaturedPost = () => {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 relative z-20">
-      <div className="bg-white rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row min-h-[500px] border border-slate-100">
+      <div className="bg-white rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row min-h-125 border border-slate-100">
         <div className="lg:w-1/2 relative h-72 lg:h-auto">
           <img
             src="https://plus.unsplash.com/premium_photo-1720744786849-a7412d24ffbf?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YmxvZ3N8ZW58MHx8MHx8fDA%3D"

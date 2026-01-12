@@ -8,7 +8,7 @@ export default function SignupPage() {
     <section className="min-h-screen flex items-center justify-center p-4 bg-white">
       {/* 1. flex-row-reverse hata diya aur lg:flex-row rakha taake Login ki tarah image right par ho ya alignment sahi rahe.
           2. max-w-6xl kiya hai taake space achi mile. */}
-      <div className="max-w-6xl w-full bg-slate-900 rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row min-h-[650px]">
+      <div className="max-w-6xl w-full bg-slate-900 rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row min-h-162.5">
         {/* Left Side: Signup Form (Exactly 50%) */}
         <div className="lg:w-1/2 w-full p-8 md:p-14 bg-slate-900 text-white flex flex-col justify-center border-r border-slate-800/50">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">

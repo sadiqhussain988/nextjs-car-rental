@@ -6,7 +6,7 @@ import { FaLock, FaEnvelope } from "react-icons/fa";
 export default function LoginPage() {
   return (
     <section className="min-h-[80vh] flex items-center justify-center p-4">
-      <div className="max-w-5xl w-full bg-slate-900 rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row min-h-[600px]">
+      <div className="max-w-5xl w-full bg-slate-900 rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row min-h-150">
         {/* Left Side: Branding/Image */}
         <div className="lg:w-1/2 relative hidden lg:block">
           <img

@@ -14,7 +14,7 @@ const BlogNewsletter = () => {
         <input
           type="email"
           placeholder="Enter your email"
-          className="flex-grow px-6 py-3 rounded-2xl bg-slate-800 border border-slate-700 text-white outline-none focus:border-yellow-400"
+          className="grow px-6 py-3 rounded-2xl bg-slate-800 border border-slate-700 text-white outline-none focus:border-yellow-400"
         />
         <button className="bg-yellow-400 text-slate-900 font-bold px-5 py-3 rounded-2xl hover:bg-yellow-300 transition-all active:scale-95">
           Subscribe
