@@ -9,14 +9,14 @@ const contactSlides = [
     highlight: "With Our Logistics Team",
     desc: "Have questions about our freight services or need a customized quote? Our team is available 24/7 to assist you.",
     image:
-      "https://images.unsplash.com/photo-1519003722824-192d992a6058?w=1200&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&auto=format&fit=crop&q=80",
   },
   {
     title: "Nationwide Support",
     highlight: "Wherever You Are",
     desc: "From Karachi to Peshawar, we ensure smooth communication and reliable truck tracking for every shipment.",
     image:
-      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&auto=format&fit=crop&q=80",
   },
 ];
 
