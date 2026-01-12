@@ -144,6 +144,7 @@ const Footer = () => {
                 type="email"
                 placeholder="Enter your email"
                 className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+                suppressHydrationWarning={true}
               />
               <button
                 type="submit"

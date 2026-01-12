@@ -1,5 +1,7 @@
+"use client";
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import image0 from "../../images/0.webp"
 import image1 from "../../images/1.jpeg"
 import image2 from "../../images/2.jpeg"
@@ -103,7 +105,7 @@ const truckServices = [
 ];
 
 // Service Card Component (Each service displayed in a card)
-const TruckServiceCard = ({ service }) => (
+const TruckServiceCard = ({ service, onLearnMore }) => (
   <div className="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-yellow-300 transform hover:-translate-y-2">
     <div className="relative h-64 w-full overflow-hidden">
       <Link href={service.href}>
@@ -127,38 +129,96 @@ const TruckServiceCard = ({ service }) => (
         </Link>
       </h3>
       <p className="text-gray-600 leading-relaxed">{service.description}</p>
-      <Link
-        href={service.href}
-        className="inline-flex items-center mt-4 text-yellow-600 font-semibold hover:text-yellow-700 transition-colors group-hover:translate-x-1 transform duration-200"
+      <button
+        onClick={() => onLearnMore(service)}
+        className="inline-flex items-center mt-4 text-yellow-600 font-semibold hover:text-yellow-700 transition-colors group-hover:translate-x-1 transform duration-200 cursor-pointer"
       >
         Learn More →
-      </Link>
+      </button>
     </div>
   </div>
 );
 
 // Main Component for Truck Services
 export default function TruckServices() {
-  return (
-    <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-20" id="services">
-      <div className="container mx-auto px-4 max-w-7xl">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
-            Our Truck Fleet
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Professional pickup truck rental services in Sharjah and surrounding areas. Choose from our wide range of well maintained vehicles.
-          </p>
-        </div>
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedService, setSelectedService] = useState(null);
 
-        {/* Truck Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {truckServices.map((service) => (
-            <TruckServiceCard key={service.id} service={service} />
-          ))}
+  const handleLearnMore = (service) => {
+    setSelectedService(service);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedService(null);
+  };
+
+  return (
+    <>
+      <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-20" id="services">
+        <div className="container mx-auto px-4 max-w-7xl">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
+              Our Truck Fleet
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional pickup truck rental services in Sharjah and surrounding areas. Choose from our wide range of well maintained vehicles.
+            </p>
+          </div>
+
+          {/* Truck Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {truckServices.map((service) => (
+              <TruckServiceCard key={service.id} service={service} onLearnMore={handleLearnMore} />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Modal */}
+      {modalOpen && selectedService && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl max-w-xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div className="p-8">
+              <div className="flex justify-between items-start mb-6">
+                <h3 className="text-2xl font-bold text-gray-800">{selectedService.title}</h3>
+                <button
+                  onClick={closeModal}
+                  className="text-gray-500 cursor-pointer hover:text-gray-700 text-2xl"
+                >
+                  ×
+                </button>
+              </div>
+              <div className="mb-6">
+                <Image
+                  src={selectedService.imageSrc}
+                  alt={selectedService.imageAlt}
+                  className="w-full h-64 object-cover rounded-lg"
+                  placeholder="blur"
+                />
+              </div>
+              <p className="text-gray-600 mb-6 leading-relaxed">{selectedService.description}</p>
+              <div className="flex gap-4">
+                <Link
+                  href={selectedService.href}
+                  className="bg-yellow-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition-colors"
+                  onClick={closeModal}
+                >
+                  Book Now
+                </Link>
+                <button
+                  onClick={closeModal}
+                  className="border border-gray-300 cursor-pointer text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
