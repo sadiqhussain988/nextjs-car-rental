@@ -5,7 +5,7 @@ function WhyChooseUs() {
   const reasons = [
     { title: "Local Expertise", description: "Deep knowledge of Sharjah areas for efficient, fast service delivery.", icon: FaMapMarkedAlt, color: "text-blue-500" },
     { title: "Affordable Rates", description: "Competitive pricing with transparent quotes and no hidden fees.", icon: FaDollarSign, color: "text-green-500" },
-    { title: "Safe & Secure", description: "Professional drivers and well-maintained vehicles for your peace of mind.", icon: FaShieldAlt, color: "text-red-500" },
+    { title: "Safe & Secure", description: "Professional drivers and well maintained vehicles for your peace of mind.", icon: FaShieldAlt, color: "text-red-500" },
     { title: "24/7 Support", description: "Round-the-clock customer service for all your rental needs.", icon: FaClock, color: "text-purple-500" },
     { title: "Top Reviews", description: "Consistently rated 5-star by satisfied customers across the region.", icon: FaStar, color: "text-yellow-500" },
     { title: "Experienced Team", description: "Trained professionals committed to excellence in every service.", icon: FaUsers, color: "text-indigo-500" },
