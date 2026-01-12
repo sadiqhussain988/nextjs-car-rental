@@ -1,19 +1,18 @@
+import Hero from "@/components/servicescomponents/Hero";
+import ServiceAreas from "@/components/servicescomponents/ServiceAreas";
+import TruckOptions from "@/components/servicescomponents/TruckOptions";
+import TruckServices from "@/components/servicescomponents/TruckService";
+import WhyChooseUs from "@/components/servicescomponents/WhyChooseUs";
+
 function Services() {
   return (
     <>
       <div>
-        <h1>This is Services Page</h1>
-        <h1>This is Services Page</h1>
-        <h1>This is Services Page</h1>
-        <h1>This is Services Page</h1>
-        <h1>This is Services Page</h1>
-        <h1>This is Services Page</h1>
-        <h1>This is Services Page</h1>
-        <h1>This is Services Page</h1>
-        <h1>This is Services Page</h1>
-        <h1>This is Services Page</h1>
-        <h1>This is Services Page</h1>
-        <h1>This is Services Page</h1>
+    <Hero/>
+    <TruckServices/>
+    <TruckOptions/>
+    <ServiceAreas/>
+    <WhyChooseUs/>
       </div>
     </>
   );
