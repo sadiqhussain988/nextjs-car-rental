@@ -70,7 +70,7 @@ export default function SignupPage() {
                 <FaLock className="absolute left-4 top-1/2 -translate-y-1/2 text-yellow-400" />
                 <input
                   type="password"
-                  placeholder="Min. 8 characters"
+                  placeholder="Min. 8 characters..."
                   className="w-full pl-12 pr-4 py-4 rounded-2xl bg-slate-800/50 border border-slate-700 outline-none focus:border-yellow-400 focus:ring-1 focus:ring-yellow-400 transition-all text-white"
                 />
               </div>
