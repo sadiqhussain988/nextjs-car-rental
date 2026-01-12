@@ -50,7 +50,7 @@ function ServiceAreas() {
   ];
 
   return (
-    <div className="py-20 px-4 bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="py-20 px-4 bg-linear-to-br from-gray-50 to-gray-100">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">

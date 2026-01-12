@@ -13,7 +13,7 @@ function TruckOptions() {
   ];
 
   return (
-    <div className="py-20 px-4 bg-gradient-to-br from-white to-gray-50" id="options">
+    <div className="py-20 px-4 bg-linear-to-br from-white to-gray-50" id="options">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
@@ -33,7 +33,7 @@ function TruckOptions() {
                 className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-yellow-300 transform hover:-translate-y-2 group"
               >
                 <div className="flex items-center justify-center mb-6">
-                  <div className="bg-gradient-to-br from-yellow-400 to-yellow-500 p-4 rounded-full shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="bg-linear-to-br from-yellow-400 to-yellow-500 p-4 rounded-full shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <IconComponent size={32} className="text-white" />
                   </div>
                 </div>

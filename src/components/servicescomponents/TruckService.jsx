@@ -116,7 +116,7 @@ const TruckServiceCard = ({ service, onLearnMore }) => (
           className="object-cover group-hover:scale-110 transition-transform duration-500"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 bg-linear-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
       </Link>
     </div>
     <div className="p-6">
@@ -156,7 +156,7 @@ export default function TruckServices() {
 
   return (
     <>
-      <section className="bg-gradient-to-br from-gray-50 to-gray-100 py-20" id="services">
+      <section className="bg-linear-to-br from-gray-50 to-gray-100 py-20" id="services">
         <div className="container mx-auto px-4 max-w-7xl">
           {/* Header */}
           <div className="text-center mb-16">
