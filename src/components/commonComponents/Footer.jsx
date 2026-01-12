@@ -9,8 +9,8 @@ import {
   FaLinkedin,
   FaPhoneAlt,
   FaEnvelope,
+  FaTruck, // IoCarSportOutline ki jagah FaTruck use kiya hai
 } from "react-icons/fa";
-import { IoCarSportOutline } from "react-icons/io5";
 
 const Footer = () => {
   return (
@@ -22,15 +22,15 @@ const Footer = () => {
           <div className="space-y-6 lg:col-span-1">
             <div className="flex items-center gap-2">
               <div className="bg-yellow-400 p-2 rounded-lg text-white text-2xl">
-                <IoCarSportOutline />
+                <FaTruck />
               </div>
               <span className="text-2xl font-bold text-slate-900">
-                Drive<span className="text-yellow-400">Ease</span>
+                Truck<span className="text-yellow-400">Ease</span>
               </span>
             </div>
             <p className="leading-relaxed text-sm text-slate-600">
-              Your trusted partner for reliable car rentals. Luxury, comfort,
-              and safety—all in one place.
+              Your trusted partner for reliable logistics and freight transport.
+              Safe, secure, and on-time delivery—nationwide.
             </p>
             <div className="flex space-x-4 text-slate-700">
               <FaFacebook className="text-xl hover:text-yellow-400 cursor-pointer transition-colors" />
@@ -46,10 +46,10 @@ const Footer = () => {
             <ul className="space-y-4 text-sm">
               <li>
                 <Link
-                  href="/cars"
+                  href="/fleet"
                   className="hover:text-yellow-400 transition-colors"
                 >
-                  Find a Car
+                  View Our Fleet
                 </Link>
               </li>
               <li>
@@ -65,7 +65,7 @@ const Footer = () => {
                   href="/about"
                   className="hover:text-yellow-400 transition-colors"
                 >
-                  About DriveEase
+                  About TruckEase
                 </Link>
               </li>
               <li>
@@ -124,11 +124,11 @@ const Footer = () => {
             <div className="space-y-4 text-sm text-slate-600">
               <div className="flex items-center gap-3">
                 <FaPhoneAlt className="text-yellow-400" />
-                <span>+1 (555) 123-4567</span>
+                <span>+92 (300) 123-4567</span>
               </div>
               <div className="flex items-center gap-3">
                 <FaEnvelope className="text-yellow-400" />
-                <span>support@driveease.com</span>
+                <span>support@truckease.com</span>
               </div>
             </div>
           </div>
@@ -137,7 +137,7 @@ const Footer = () => {
           <div>
             <h4 className="text-slate-900 font-bold mb-6">Subscribe</h4>
             <p className="text-slate-600 text-sm mb-4">
-              Get the latest offers and updates straight to your inbox.
+              Get the latest logistics updates and shipping rates to your inbox.
             </p>
             <form className="space-y-3">
               <input
@@ -158,9 +158,10 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
           <p>
-            © {new Date().getFullYear()} DriveEase Rental. All rights reserved.
+            © {new Date().getFullYear()} TruckEase Logistics. All rights
+            reserved.
           </p>
-          <p className="mt-2 md:mt-0 italic">Designed for speed & luxury</p>
+          <p className="mt-2 md:mt-0 italic">Reliable, Safe & On-Time</p>
         </div>
       </div>
     </footer>

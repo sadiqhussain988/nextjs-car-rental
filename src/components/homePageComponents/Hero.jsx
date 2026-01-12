@@ -6,25 +6,25 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const slides = [
   {
-    title: "Premium Car Rentals",
-    highlight: "For Every Journey",
-    desc: "Discover comfort, performance, and style with our wide range of modern vehicles. Rent easily, drive confidently.",
+    title: "Reliable Truck Booking",
+    highlight: "For Heavy Hauling",
+    desc: "Easily transport your valuable goods and heavy cargo. Professional drivers and secure transport are now just a click away.",
     image:
-      "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1200&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&auto=format&fit=crop&q=80",
   },
   {
-    title: "Luxury & Comfort",
-    highlight: "Drive With Style",
-    desc: "Choose from luxury sedans, powerful SUVs, and premium cars designed to elevate your journey.",
+    title: "Smart Logistics Solutions",
+    highlight: "Home & Office Shifting",
+    desc: "Whether you're moving your home or office equipment, our modern fleet and expert team are ready to assist you anytime.",
     image:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&auto=format&fit=crop&q=80",
   },
   {
-    title: "Fast & Easy Booking",
-    highlight: "Anywhere, Anytime",
-    desc: "Book your perfect ride in minutes with flexible pickup locations and transparent pricing.",
+    title: "Fast & Secure Delivery",
+    highlight: "Anywhere in Pakistan",
+    desc: "A wide range of truck sizes is available. Ship your goods nationwide with transparent pricing and real-time live tracking.",
     image:
-      "https://images.unsplash.com/photo-1549924231-f129b911e442?w=1200&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJ1Y2tzfGVufDB8fDB8fHww",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function Hero() {
       {/* Left Arrow */}
       <div
         onClick={prevSlide}
-        className="absolute left-2 z-20 bg-gray-100/25 hover:bg-gray-100/35 p-4 rounded-full cursor-pointer"
+        className="absolute hidden lg:block left-2 z-20 bg-gray-100/25 hover:bg-gray-100/35 p-4 rounded-full cursor-pointer"
       >
         <ArrowLeft className="text-white" />
       </div>
@@ -95,10 +95,11 @@ export default function Hero() {
             </p>
             <div className="mt-8 flex flex-wrap gap-4 items-center justify-center">
               <button className="rounded-2xl px-8 py-3 text-base font-semibold bg-yellow-400 text-black hover:bg-yellow-300 transition">
-                Book a Car
+                Book a Truck
               </button>
+
               <button className="rounded-2xl px-8 py-3 text-base font-semibold border border-white/40 text-white hover:bg-white/10 transition">
-                View Fleet
+                View Our Trucks
               </button>
             </div>
           </motion.div>
@@ -108,7 +109,7 @@ export default function Hero() {
       {/* Right Arrow */}
       <div
         onClick={nextSlide}
-        className="absolute right-2 z-20 bg-gray-100/25 hover:bg-gray-100/35 p-4 rounded-full cursor-pointer"
+        className="absolute hidden lg:block right-2 z-20 bg-gray-100/25 hover:bg-gray-100/35 p-4 rounded-full cursor-pointer"
       >
         <ArrowRight className="text-white" />
       </div>

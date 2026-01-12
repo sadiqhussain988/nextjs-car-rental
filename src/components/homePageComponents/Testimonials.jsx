@@ -7,25 +7,25 @@ const Testimonials = () => {
     {
       id: 1,
       name: "Alex Johnson",
-      role: "Business Traveler",
+      role: "E-commerce Owner",
       comment:
-        "The car was in pristine condition and the pickup process was incredibly smooth. Highly recommended for professionals.",
+        "The transport was highly professional and the truck arrived exactly on time. Perfect for businesses that value punctuality.",
       img: "https://randomuser.me/api/portraits/men/32.jpg",
     },
     {
       id: 2,
       name: "Sarah Miller",
-      role: "Tourist",
+      role: "Homeowner",
       comment:
-        "Best prices I found in the city. The SUV we rented for our family trip was perfect and very clean.",
+        "Moving houses was so easy with their service. The drivers handled my furniture with extreme care and the pricing was very fair.",
       img: "https://randomuser.me/api/portraits/women/44.jpg",
     },
     {
       id: 3,
       name: "David Chen",
-      role: "Local Client",
+      role: "Logistics Manager",
       comment:
-        "I've used DriveEase multiple times. Their 24/7 support actually works! Had a minor query at 2 AM and they picked up.",
+        "I've used TruckEase for multiple long-haul shipments. Their 24/7 support is top-notch and tracking is always accurate.",
       img: "https://randomuser.me/api/portraits/men/85.jpg",
     },
   ];
@@ -44,7 +44,7 @@ const Testimonials = () => {
         </div>
 
         {/* Review Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reviews.map((r) => (
             <div
               key={r.id}
