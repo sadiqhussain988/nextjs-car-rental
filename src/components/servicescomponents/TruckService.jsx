@@ -45,7 +45,7 @@ const truckServices = [
   {
     id: '7-ton',
     title: '7 Ton Pickup Truck Rental Sajaa, Sharjah',
-    description: 'Reliable for bulky shipments and long-distance moves across Sharjah and surrounding UAE regions.',
+    description: 'Reliable for bulky shipments and long distance moves across Sharjah and surrounding UAE regions.',
     href:"#",
     imageSrc: image3,
     imageAlt: 'Pickup Truck Rental Al Sajaa Near Ali Musa',
