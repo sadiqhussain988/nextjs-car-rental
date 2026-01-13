@@ -1,9 +1,9 @@
 
-import Hero from "@/components/servicesComponents/Hero";
-import ServiceAreas from "@/components/servicesComponents/ServiceAreas";
-import TruckOptions from "@/components/servicesComponents/TruckOptions";
-import TruckService from "@/components/servicesComponents/TruckService";
-import WhyChooseUs from "@/components/servicesComponents/WhyChooseUs";
+import Hero from "@/components/servicescomponents/Hero";
+import ServiceAreas from "@/components/servicescomponents/ServiceAreas";
+import TruckOptions from "@/components/servicescomponents/TruckOptions";
+import TruckService from "@/components/servicescomponents/TruckService";
+import WhyChooseUs from "@/components/servicescomponents/WhyChooseUs";
 
 
 function Services() {
