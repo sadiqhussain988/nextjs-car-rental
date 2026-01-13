@@ -1,22 +1,26 @@
+import truck1 from "../../images/1.jpeg";
+import truck2 from "../../images/2.jpeg";
+import truck3 from "../../images/3.jpeg";
+
 export default function FeaturedTrucks() {
   const trucks = [
     {
       id: 1,
       name: "Mini Cargo Truck",
       price: "$50/trip",
-      img: "https://images.unsplash.com/photo-1591768793355-74d04bb6608f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dHJ1Y2tzfGVufDB8fDB8fHww",
+      img: truck1,
     },
     {
       id: 2,
       name: "Heavy Duty Hauler",
       price: "$120/trip",
-      img: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=500&auto=format&fit=crop&q=60",
+      img: truck2,
     },
     {
       id: 3,
       name: "Flatbed Transport",
       price: "$90/trip",
-      img: "https://media.istockphoto.com/id/1372188715/photo/delivery-truck-in-a-city.webp?a=1&b=1&s=612x612&w=0&k=20&c=znWxTMpJsi1f7bw7Xip_vYBa1CAHiLOH6db3p-sH1qE=",
+      img: truck3,
     },
   ];
 
@@ -45,7 +49,7 @@ export default function FeaturedTrucks() {
               {/* Image */}
               <div className="overflow-hidden rounded-xl">
                 <img
-                  src={truck.img}
+                  src={truck.img.src}
                   alt={truck.name}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
                 />
