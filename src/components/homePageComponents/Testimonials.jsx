@@ -31,7 +31,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-16">
@@ -48,7 +48,7 @@ const Testimonials = () => {
           {reviews.map((r) => (
             <div
               key={r.id}
-              className="p-8 rounded-2xl border border-gray-200 bg-white hover:shadow-2xl transition-all duration-300"
+              className="p-8 rounded-2xl border border-gray-200 hover:border-yellow-400 bg-white hover:shadow-lg  transition duration-400 hover:scale-103"
             >
               {/* Stars */}
               <div className="flex gap-1 text-yellow-400 mb-4">

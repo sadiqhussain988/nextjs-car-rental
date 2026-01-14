@@ -20,7 +20,7 @@ export default function Home() {
               Book your reliable truck today!
             </span>
           </h2>
-          <button className="mt-8 bg-yellow-400 text-slate-900 px-5 py-3 rounded-full font-bold text-lg hover:bg-yellow-300 transition-all shadow-2xl active:scale-95">
+          <button className="mt-8 cursor-pointer bg-yellow-400 text-slate-900 px-5 py-3 rounded-full font-bold text-lg hover:bg-yellow-300 transition duration-400 hover:scale-105 shadow-2xl active:scale-95">
             Check Our Fleet
           </button>
         </div>

@@ -29,7 +29,7 @@ const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="py-24 bg-slate-50">
+    <section className="py-16 bg-slate-50">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
@@ -50,11 +50,13 @@ const FAQSection = () => {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
-                className="w-full flex items-center justify-between p-6 text-left"
+                className="w-full flex items-center justify-between p-6 text-left group cursor-pointer"
               >
                 <span
-                  className={`font-bold text-lg ${
-                    openIndex === index ? "text-yellow-500" : "text-slate-900"
+                  className={`font-bold text-lg  ${
+                    openIndex === index
+                      ? "text-yellow-500"
+                      : "text-slate-900 group-hover:text-yellow-400 transition duration-400"
                   }`}
                 >
                   {faq.question}
@@ -62,7 +64,7 @@ const FAQSection = () => {
                 {openIndex === index ? (
                   <Minus className="text-yellow-500" />
                 ) : (
-                  <Plus className="text-slate-400" />
+                  <Plus className="text-slate-400 group-hover:text-yellow-400 transition duration-400" />
                 )}
               </button>
 

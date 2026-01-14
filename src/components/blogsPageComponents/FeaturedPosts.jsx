@@ -37,7 +37,7 @@ const FeaturedPost = () => {
           </p>
 
           <div className="flex items-center justify-between mt-auto pt-6 border-t border-slate-50">
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col md:flex-row items-center gap-4">
               <img
                 src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
                 alt="Author"

@@ -9,7 +9,7 @@ import {
 const ContactSection = () => {
   return (
     // Section par overflow-hidden lagaya taake koi horizontal scroll na bane
-    <section className="py-12 md:py-24 bg-white overflow-hidden w-full">
+    <section className="py-12 md:pt-20 md:pb-14 bg-white overflow-hidden w-full">
       {/* 1. max-w-7xl ko mx-auto ke sath center kiya.
          2. px-4 ensure karega ke dono sides par barabar gap ho (left and right).
       */}
@@ -113,7 +113,7 @@ const ContactSection = () => {
                 placeholder="How can we assist you with your logistics?"
                 className="w-full px-4 md:px-5 py-3 md:py-4 rounded-2xl bg-slate-50 border-none focus:ring-2 focus:ring-yellow-400 outline-none font-medium text-slate-900 transition-all resize-none text-sm md:text-base"
               ></textarea>
-              <button className="w-full bg-slate-900 text-white py-4 md:py-5 rounded-2xl font-bold text-base md:text-lg hover:bg-yellow-400 hover:text-slate-900 transition-all duration-300 shadow-lg active:scale-95">
+              <button className="w-full cursor-pointer bg-slate-900 text-white py-4 md:py-5 rounded-2xl font-bold text-base md:text-lg hover:bg-yellow-400 hover:text-slate-900 transition-all duration-300 shadow-lg active:scale-95">
                 Send Message
               </button>
             </form>

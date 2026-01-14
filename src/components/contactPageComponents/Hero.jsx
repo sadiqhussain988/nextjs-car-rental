@@ -54,9 +54,9 @@ export default function ContactHero() {
 
       <div
         onClick={prevSlide}
-        className="absolute hidden lg:block left-4 z-20 bg-gray-100/25 hover:bg-gray-100/35 p-4 rounded-full cursor-pointer"
+        className="absolute hidden lg:block left-4 z-20 p-4 rounded-full "
       >
-        <ArrowLeft className="text-white" />
+        <ArrowLeft className="text-white cursor-pointer" />
       </div>
 
       <div className="relative z-10 max-w-7xl w-full px-6 text-center">
@@ -84,9 +84,9 @@ export default function ContactHero() {
 
       <div
         onClick={nextSlide}
-        className="absolute hidden lg:block right-4 z-20 bg-gray-100/25 hover:bg-gray-100/35 p-4 rounded-full cursor-pointer"
+        className="absolute hidden lg:block right-4 z-20  p-4 rounded-full "
       >
-        <ArrowRight className="text-white" />
+        <ArrowRight className="text-white cursor-pointer" />
       </div>
     </section>
   );

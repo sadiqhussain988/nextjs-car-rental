@@ -25,7 +25,7 @@ export default function FeaturedTrucks() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section className="pt-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-12">
@@ -44,7 +44,7 @@ export default function FeaturedTrucks() {
           {trucks.map((truck) => (
             <div
               key={truck.id}
-              className="border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300"
+              className="border border-gray-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition duration-300 group hover:border-yellow-400"
             >
               {/* Image */}
               <div className="overflow-hidden rounded-xl">
@@ -64,7 +64,7 @@ export default function FeaturedTrucks() {
                 <span className="text-yellow-500 font-bold text-lg">
                   {truck.price}
                 </span>
-                <button className="px-5 py-2 rounded-lg text-sm font-semibold bg-slate-900 text-white hover:bg-slate-800 transition">
+                <button className="px-5 py-2 rounded-lg cursor-pointer text-sm font-semibold bg-slate-900 text-white hover:bg-yellow-400 hover:scale-105 transition duration-400">
                   Book Now
                 </button>
               </div>

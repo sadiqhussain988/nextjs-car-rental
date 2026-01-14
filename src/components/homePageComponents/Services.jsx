@@ -27,7 +27,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="pt-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -46,9 +46,9 @@ const Services = () => {
           {features.map((f, i) => (
             <div
               key={i}
-              className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 group"
+              className="bg-white border flex flex-col items-center text-center border-gray-200 rounded-2xl px-8 py-6 hover:shadow-lg transition hover:border-yellow-400 duration-400 group hover:scale-103"
             >
-              <div className="text-4xl text-yellow-400 mb-6 bg-yellow-50 w-16 h-16 flex items-center justify-center rounded-xl transition-all group-hover:bg-yellow-400 group-hover:text-white">
+              <div className="text-4xl text-yellow-400 mb-6 bg-yellow-50 w-16 h-16 flex items-center justify-center rounded-xl transition duration-400 group-hover:bg-yellow-400 group-hover:text-white">
                 {f.icon}
               </div>
               <h4 className="text-xl font-semibold text-slate-900 mb-3">

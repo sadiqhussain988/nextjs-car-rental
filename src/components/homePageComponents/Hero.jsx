@@ -107,11 +107,17 @@ export default function Hero() {
         <p className="mt-6 max-w-xl text-white/80">{slides[index].desc}</p>
       </div>
 
-      <button onClick={prevSlide} className="absolute left-4 top-1/2 z-20">
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 z-20 cursor-pointer"
+      >
         <ArrowLeft className="text-white" />
       </button>
 
-      <button onClick={nextSlide} className="absolute right-4 top-1/2 z-20">
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 z-20 cursor-pointer"
+      >
         <ArrowRight className="text-white" />
       </button>
     </section>
